@@ -1,0 +1,29 @@
+{
+  "name": "mprjct",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pujasvi/mprjct.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pujasvi/mprjct/issues"
+  },
+  "homepage": "https://github.com/Pujasvi/mprjct#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "filepicker-js": "^2.4.17",
+    "fs": "0.0.2",
+    "md5": "^2.1.0",
+    "mysql": "^2.11.1",
+    "validate.js": "^0.10.0",
+    "validator": "^5.5.0"
+  }
+}

@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<script type="text/javascript" src="validator.min.js"></script>
+    <link rel="stylesheet" href= "css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Rancho|Dancing+Script|Black+Ops+One|Kaushan+Script|Ewert|Monofett|Bree+Serif&effect=shadow-multiple|3d-float|3d">
+    <script src="./jquery.js"></script>
+    <script type="text/javascript"
+            src="//api.filestackapi.com/filestack.js"></script>
+
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        body{
+            background-color: darkgray;
+        }
+        #nav{
+
+            height:200px;
+            width: 1300px;
+            padding: 1px;
+            position:fixed;
+            z-index: 10;
+        }
+        #logo{
+            background-color: crimson;
+            height:100px;
+            width:100px;
+            border-radius: 50px;
+            color:white;
+            text-align: center;
+            padding: 1px;
+            margin-left: 20px;
+
+            margin-top: 10px;
+        }
+        #logo_text{
+
+            position:absolute;
+            margin-top:40px ;
+            margin-left: -40px ;
+        }
+        nav{
+            margin-top: 50px;
+            font-size:17px ;
+
+        }
+        #try{
+            color:white;
+            height:100px;
+            width:200px;
+            margin-top: 50px;
+            font-size: 17px;
+        }
+        #back_image{
+            padding:1px;
+            background-image: url("pic2.jpg");
+            height:700px;
+            width:1300px;
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+
+        #side{margin-top: 250px;
+            height:60px;
+            width:700px;
+            color:white;
+            font-size: 40px;
+            animation:example 3s  linear 0s ;
+            animation-fill-mode: forwards;
+            font-weight: bold;
+
+        }
+        #side2{
+            margin-top:10px ;
+            color:ghostwhite;
+            height:60px;
+            width:700px;
+            font-size: 40px;
+            animation:example2 3s linear 1s;
+            animation-fill-mode: forwards;
+            font-weight: bold;
+
+
+
+        }
+        /* #side3{
+             margin-top: 10px;
+             color:brown;
+             font-size: 40px;
+             height:60px;
+             width:700px;
+             font-weight: bold;
+             animation:example3 3s linear 2s;
+             animation-fill-mode: forwards;
+         }
+ */
+        #lower{
+            height:2500px;
+            width:1310px;
+            background-image: url("d10.jpg");
+            padding:1px;
+            box-sizing: border-box;
+
+        }
+        #cevent {
+
+            margin-top: 20px;
+            height: 500px;
+            width: 650px;
+            background-color: white;
+        }
+
+        #vevent{
+            margin-top: 20px;
+            height: 500px;
+            width: 650px;
+
+            background-color: black;
+
+        }
+
+        #ccevent {
+
+            margin-top: 20px;
+            height: 500px;
+            width: 650px;
+            background-color: black;
+        }
+
+        #vvevent{
+            margin-top: 20px;
+            height: 500px;
+            width: 650px;
+
+            background-color: white;
+
+        }
+        /*
+                #levent{
+                    margin-top: 20px;
+                    height: 300px;
+                    width: 600px;
+                    background-color: #2aabd2;
+                }
+                */
+        @-webkit-keyframes example {
+
+            from{
+                margin-left: 0px;
+            }
+            to{
+                margin-left: 100px;
+            }
+        }
+
+        @-webkit-keyframes example2 {
+            0%{
+                margin-left:0px ;
+            }
+            50%{
+                margin-left:40px ;
+
+            }
+            100%{
+                margin-left:100px;
+            }
+        }
+        /*  @-webkit-keyframes example3 {
+                0%{
+                    margin-left:0px ;
+                }
+                50%{
+                    margin-left:100px ;
+
+                }
+                100%{
+                    margin-left:160px;
+                }
+            }*/
+        #connect{
+            height:300px;
+            width:1300px;
+            background-image: url("d13.jpg");
+        }
+        .fb{margin-left: 20px;
+            font-size: 20px;
+
+
+        }
+        #form{height:280px;
+            width:600px;
+
+            background-image: url("d13.jpg");
+            margin-left: 50px;
+            margin-top: 10px;
+
+        }
+
+        #form2{
+            margin-top: 10px;
+            height:280px;
+            width:400px;
+      background-image: url("d13.jpg");
+
+
+        }
+        .pic{
+            margin-left: -20px;
+        }
+        #info{
+            height:150px;
+            width:350px;
+            background-image: url("d13.jpg");
+        }
+        #fm{
+            background-image: url("d13.jpg");
+            height:50px;
+            width:350px
+        }
+
+        .my{
+            height:40px;
+            width:40px;
+            margin-left: 20px;
+        }
+        #info{
+            font-size:18px ;
+        }
+        #about{
+            margin-left :500px;
+            font-size: 4em;
+            color : maroon;
+            font-weight: bold;
+        }
+        #about-que{
+            margin-left:250px;
+            font-size : 2em;
+
+        }
+        #about-content{
+            margin-left: 10px;
+            padding:10px;
+            font-size: 27px;
+
+        }
+        #inlower{
+            height: 400px;
+            width: auto;
+            background-image:url("d13.jpg")
+        }
+
+        #abt{
+            background-image: url("d10.jpg");
+            height: 3000px;
+            width:auto;
+        }
+        .outer{
+            background-color: blueviolet;
+            margin-top: 400px;
+        }
+        .combo{
+            display: flex;
+            flex-direction: row;
+        }
+        .blck{
+            background-color: black;
+            height:500px;
+            width:650px;
+        }
+        .wht{
+            background-color: white;
+            height:500px;
+            width:650px;
+        }
+        #img1{
+            height: 300px;
+            width:300px;
+            margin-left: 15px;
+            position: absolute;
+            overflow: hidden;
+        ;
+        }
+        #img1 img{
+            height:300px ;
+            width:300px;
+
+        }
+        #img1 img:hover{
+            height:330px;
+            width:330px;
+
+        }
+        #img2{
+            overflow: hidden;
+            height: 300px;
+            width:300px;
+            position: absolute;
+            margin-left: 15px;
+            display: none;
+        }
+        #img2 img{
+            height:300px ;
+            width:300px;
+
+        }
+        #img2 img:hover{
+            height:330px;
+            width:330px;
+
+        }
+
+        #img3{
+            overflow: hidden;
+            height: 300px;
+            width:300px;
+            position: absolute;
+            margin-left: 15px;
+            display: none;
+        }
+        #img3 img{
+            height:300px ;
+            width:300px;
+
+        }
+        #img3 img:hover{
+            height:330px;
+            width:330px;
+
+        }
+        #cont{
+            position: relative;
+            margin-left: 100px;
+            background-image: url("d13.jpg");
+            height:500px;
+            width:320px;
+
+            flex-shrink: 1;
+            padding:1px;
+
+
+        }
+        .prv{position: absolute;
+            margin-left: -100px;
+            margin-top: 150px;
+            z-index:10;
+            color:white;
+            height:50px;
+            width:50px;
+            border-radius: 10px;
+
+        }
+
+        .next{position: absolute;
+            height:50px;
+            width:50px;
+            border-radius: 10px;
+            margin-left: 1180px;
+            margin-top: 150px;
+            z-index:10;
+
+            color:white;
+
+        }
+        .prv:hover{
+            background-color: #0f0f0f;
+
+        }
+        .next:hover{
+            background-color: #0f0f0f;
+
+        }
+        #cimg1{
+            overflow: hidden;
+            height: 300px;
+            width:300px;
+            margin-left: 15px;
+            position: absolute;
+        ;
+        }
+        #cimg1 img{
+            height:300px ;
+            width:300px;
+
+        }
+        #cimg1 img:hover{
+            height:330px;
+            width:330px;
+
+        }
+        #cimg2{
+            overflow: hidden;
+            height: 300px;
+            width:300px;
+            position: absolute;
+            margin-left: 15px;
+            display: none;
+        }
+        #cimg2 img{
+            height:300px ;
+            width:300px;
+
+        }
+        #cimg2 img:hover{
+            height:330px;
+            width:330px;
+
+        }
+        #cimg3{
+            overflow: hidden;
+            height: 300px;
+            width:300px;
+            position: absolute;
+            margin-left: 15px;
+            display: none;
+        }
+
+        #cimg3 img{
+            height:300px ;
+            width:300px;
+
+        }
+        #cimg3 img:hover{
+            height:330px;
+            width:330px;
+
+        }
+        #ccont{
+
+            flex-shrink: 1;
+            position: relative;
+            margin-left: 50px;
+            background-image: url("d13.jpg");
+            height:500px;
+            width:320px;
+            padding:1px;
+
+
+        }
+        #ccimg1{
+            height: 300px;
+            width:300px;
+            margin-left: 15px;
+            overflow: hidden;
+            position: absolute;
+        ;
+        }
+        #ccimg1 img{
+            height:300px ;
+            width:300px;
+
+        }
+        #ccimg1 img:hover{
+            height:330px;
+            width:330px;
+
+        }
+        #ccimg2{
+            overflow: hidden;
+            height: 300px;
+            width:300px;
+            position: absolute;
+            margin-left: 15px;
+            display: none;
+        }
+        #ccimg2 img{
+            height:300px ;
+            width:300px;
+
+        }
+        #ccimg2 img:hover{
+            height:330px;
+            width:330px;
+
+        }
+        #ccimg3{
+            overflow: hidden;
+            height: 300px;
+            width:300px;
+            position: absolute;
+            margin-left: 15px;
+            display: none;
+        }
+        #ccimg3 img{
+            height:300px ;
+            width:300px;
+
+        }
+        #ccimg3 img:hover{
+            height:330px;
+            width:330px;
+
+        }
+        #cccont{
+
+
+            flex-shrink: 1;
+            position: relative;
+            margin-left: 50px;
+            background-image: url("d13.jpg");
+            height:500px;
+            width:320px;
+            padding:1px;
+
+
+        }
+
+        .wrap{
+            display: flex;
+            flex-direction: row;
+        }
+
+        #create-content,#in{
+            height: 100px;
+            width :450px;
+            font-size: 1.5em;
+            margin-top: 90px;
+            margin-left: 95px;
+            margin-right: 50px;
+            font-family: Consolas;
+
+        }
+        #create-btn,#view-btn{
+
+            display: inline-block;
+            border-radius: 4px;
+            background-color: bisque;
+            border: double;
+            color: black;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            cursor: pointer;
+            margin-left: 230px;
+
+        } #about{
+              margin-left :500px;
+              font-size: 4em;
+              color : maroon;
+              font-weight: bold;
+          }
+        #about-que{
+            margin-left:250px;
+            font-size : 2em;
+
+        }
+        #about-content{
+            font-size: 1.5em ;
+
+        }
+        .modal{
+            top:0;
+            right:0;
+            bottom:0;
+            left :0;
+            display: none;
+            position: fixed;
+            z-index: 99999;
+            overflow: auto;
+            width:100%;
+            height:1300px;
+            background-color: rgba(0,0,0,0.4);
+
+        }
+        .modal-content{
+            background-color: lemonchiffon;
+            margin: 8% auto;
+            bottom:0px;
+            width: 90%;
+            height:100%;
+            padding: 20px;
+        }
+        .close{
+            color: black;
+            float: right;
+            font-size: 30px;
+            font-weight: bolder;
+
+        }
+        .close:hover,.close:focus{
+            text-decoration: double;
+            cursor: pointer;
+            color: darkred;
+        }
+        #form1,#form3{
+            display :flex;
+            height: 800px;
+            width: 800px;
+        }
+        #fields,#signup_fields{
+            height:350px;
+            width : 200px;
+        }
+        /*  #overlay {
+              visibility: hidden;
+              position: absolute;
+              left: 0px;
+              top: 0px;
+              width:100%;
+              height:100%;
+              text-align:center;
+              z-index: 1;
+          }
+          #overlay-in{
+              width:90%;
+              margin: 100px auto;
+              background-color: #fff;
+              border:1px solid #000;
+              padding:15px;
+              text-align:center;
+          }*/
+        .popup {
+            position: relative;
+            display: inline-block;
+            /* visibility: visible;
+             */cursor: pointer;
+            /* -webkit-user-select: none;
+             -moz-user-select: none;
+             -ms-user-select: none;
+             user-select: none;
+ */
+        }
+
+        #chk,#msg,#vr{
+            color:red;
+        }
+
+        /* The actual popup */
+        .popup .popuptext {
+            display:none;
+            /* visibility: hidden;
+             */width: 250px;
+            background-color: steelblue;
+            color: black;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            left: 120%;
+            margin-left: -80px;
+        }
+        #snd{
+            margin-left:400px
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 5%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent steelblue transparent;
+        }
+
+        /* Toggle this class - hide and show the popup */
+
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:1 ;}
+        }
+        #lg{
+            position: relative;
+            display: inline;
+        }
+        #inr{ z-index: 1;
+            display:none;
+            cursor:pointer;
+            top: 100%;
+            left: 120%;
+            margin-left: -55px;
+            position:absolute;
+            width:250px;
+        }
+        .blck,.wht{
+            padding: 1px;
+        }
+        #inr::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 5%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent steelblue transparent;
+        }
+        #l4-content{
+            font-size: 50px;
+
+            text-align:center
+        }
+        #vw{
+            font-size: 50px;
+            text-align:center
+        }
+        @media screen and (max-width:1200px) and (min-width:1000px){
+
+            #about-content{
+                word-wrap: break-word;
+                width:1200px;
+                height:auto;
+
+            }
+.wht{
+width:600px;
+    height:600px;
+}
+.blck{
+    height:600px;
+width:600px;
+}
+#cont{
+    margin-left: 60px;
+    width:310px;
+}
+#ccont,#cccont{width:310px;}
+        }
+        .prv{
+            margin-left: 50px;
+        }
+        .next{
+            margin-left:950px ;
+        }
+
+
+
+
+        @media screen and (max-width:1000px) and (min-width:770px){
+#about{
+    margin-left: 300px;
+}
+            .prv{
+      margin-left: 20px;
+  }
+            .next{
+                margin-left:680px;
+            }
+.wrap{
+    flex-wrap: wrap;
+}
+#cccont{
+    display: none;
+}
+
+            #cont{
+                margin-left: 100px;
+            }
+            #ccont{
+                margin-left: 100px;
+            }
+
+
+            #form{
+                width: 400px;
+
+            }
+
+#snd{
+    margin-left: 200px;
+}
+            #about-content{
+                word-wrap: break-word;
+                width:770px;
+                height:auto;
+
+                margin-left: 100px;
+            }
+            #about-que{
+
+                margin-left: 100px;
+            width: auto;
+            }
+            .wht{
+                width:500px;
+                height:500px;
+            }
+            .blck{
+                height:500px;
+                width:500px;
+            }
+            #view-btn{
+                margin-left: 200px;
+            }
+#vw{
+    font-size: 30px;
+}
+#in{
+    margin-left: 50px;
+}
+#create-btn{
+    margin-left: 150px;
+}
+#l4-content{
+    font-size: 30px;
+}
+#create-content{
+    margin-left: 50px;
+}
+        }
+
+
+
+
+
+
+
+        @media screen and (max-width:770px) and (min-width:500px) {
+
+            #abt{
+                height:3300px;
+            }
+            #form{
+    width:350px
+}
+            #form2{
+                margin-left: -10px;
+            }
+#back_image{
+    width: 750px;
+}
+            #snd{
+                margin-left: 200px;
+            }
+            #about{
+                margin-left: 220px;
+            }
+            #about-content{
+                word-wrap: break-word;
+                width:690px;
+                height:auto;
+
+                margin-left: 35px;
+            }
+            #about-que{
+                width:690px ;
+
+                margin-left: 35px;
+
+            }
+
+
+            .combo{
+                display: block;
+            }
+            .wht{
+                width:760px;
+                height:400px;
+            }
+            .blck{
+                height:400px;
+                width:760px;
+            }
+            #view-btn{
+
+                margin-left: 250px;
+            }
+            #vw{
+                font-size: 30px;
+            }
+            #in{
+                margin-left: 150px;
+
+
+                word-wrap: break-word;
+
+            }
+            #create-btn{
+
+                margin-left: 250px;
+            }
+            #l4-content{
+
+
+                font-size: 30px;
+
+            }
+            #create-content{
+
+
+                word-wrap: break-word;
+                margin-left: 150px;
+
+            }
+
+        }
+        @media screen and (max-width:500px) and (min-width:200px) {
+            #nav{
+                position: absolute;
+            }
+#ccont,#cccont,#cont {
+    margin-left: 70px;
+}
+            .wrap{
+                display: block;
+            }
+            #abt{
+                height:4800px;
+            }
+
+            .combo{
+    display: block;
+}
+
+            #form{margin-left: 3px;
+                width:250px;
+                height:auto
+
+            }
+            .my{
+                height:20px;
+                width:20px;
+                margin-left: 3px;
+            }
+            #form2{
+
+                width:180px;
+                height:auto
+            }
+            #info{
+                width: 180px;
+            }
+            #fm{
+                margin-top: 50px;
+                width:180px;
+            }
+            #about{
+                margin-left: 100px;
+            }
+            #about-content{
+                word-wrap: break-word;
+                width:420px;
+                height:auto;
+
+                margin-left: 15px;
+                font-size: 20px;
+            }
+            #about-que{
+                width:420px ;
+
+                margin-left: 15px;
+                font-size: 20px;
+
+            }
+#back_image{
+    width: 490px;
+}
+            .wht{
+                width:500px;
+                height:600px;
+            }
+            .blck{
+                height:400px;
+                width:500px;
+            }
+            #view-btn{
+
+                margin-left: 150px;
+            }
+            #vw{
+                font-size: 30px;
+            }
+            #in{
+                margin-left: 50px;
+                width:auto;
+                height: auto;
+
+                word-wrap: break-word;
+
+            }
+            #create-btn{
+
+                margin-left: 150px;
+            }
+            #l4-content{
+
+
+                font-size: 30px;
+
+            }
+            #create-content{
+
+width:auto;
+                height: auto;
+                word-wrap: break-word;
+                margin-left: 50px;
+
+            }
+            #cconct{
+
+                margin-top: 70px;
+            }
+
+        }
+    </style>
+
+
+</head>
+<body>
+<div id="back_image">
+    <div id="nav" class="row">
+        <div id="logo" class="col-xs-1 col-sm-1 col-md-2 col-lg-2"><span id="logo_text" style=" font-size:20px;font-family: 'Black Ops One', cursive;">E-event</span></div>
+        <nav class="col-xs-1 col-sm-6 col-md-6 col-lg-6  col-xs-offset-1 col-sm-offset-0 col-md-offset-1 col-lg-offset-1" >
+            <a href="#ab" ><mark>ABOUT</mark></a>&emsp;
+            <a href="#cn"><mark>CONNECT</mark></a>&emsp;
+            <!--<a href="#"><mark>LOGIN</mark></a>&emsp;
+            -->
+
+
+            <a href="#" onclick="sign()"><mark>SIGNUP</mark></a>
+            <div id="signupid" class="modal">
+                <div  class ="modal-content"><center><b> SIGN UP here.</b></center>
+                    <button class="close" onclick="div_hide()">X</button>
+                    <form   name="ff" id="ff" method ="post"><div id="form3"><div id="signup_fields"><br> Username* :
+                        <br><br>Phone number* :
+                        <br><br>Email id* :
+                        <br><br>Password* :
+                        <br><br>Re-enter password*:
+
+
+                        <br><br>Any more Details about you:
+                    </div> <div id ="signup_fill-fields"><br>
+                        <input type="text" name="user-name" autocomplete="on" autofocus="on" required id="name"> <br><br>
+                        <input type="text" name="phone" autocomplete="on" required id="phn"><br><br>
+                        <input type="email" name="id" required autocomplete="on" id="id"><br><br>
+                        <input type="password" name="pass" required id="pd1"><br><br>
+                        <input type="password" requires id="pd2"><br><br>
+                        <div id="chk"></div>
+
+
+
+                        <textarea rows="8" cols="25" wrap="hard" id="inf"></textarea>
+                        <br><input type="button" value="SIGN UP" onclick="sp()">
+
+                    </div>
+                    </div>
+
+                    </form>
+                </div>
+            &nbsp;&nbsp;&nbsp;</div>
+
+            <div id="lg">
+                <a href="#" onclick="my()" ><mark>LOGIN</mark></a>
+                <div id="inr" style="background-color: #2aabd2">
+                    <div id="close" onclick="cls() " style="margin-left:230px">X</div>
+                    <div id="msg"></div>
+                    <form  method="post" id="log">
+                        USERNAME :<input type="text" name="name" autocomplete="on" autofocus="on" required id="user-name">
+                        <br><br> PASSWORD :<input type="password" name="pass" required id="pswrd">
+                        <br><br>
+                        <input type="button" value="Login" onclick="lg()">
+                    </form>
+                </div>
+           &nbsp;</div>
+            <a href="#form"><mark>FEEDBACK</mark></a>
+        </nav>
+        <div id="try" class="col-xs-2 col-sm-2 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-1
+    col-lg-offset-2 font-effect-shadow-multiple  font-effect-3d" style="display: block">  WELCOME </div>
+
+    </div>
+    <div id="side" class="font-effect-shadow-multiple  font-effect-3d"> Create  events</div>
+
+    <div id="side2" class="font-effect-shadow-multiple  font-effect-3d"> View events</div>
+    <!--
+        <div id="side3">Let you view events of your intrest</div>-->
+</div>
+<div id="olower">
+<div id="lower" class="row" >
+    <div id="abt">
+        <div class="combo">
+            <div class="blck" ></div>
+            <div class="wht">
+                <div id="vw" >VIEW ALL EVENTS</div>
+                <div id="in" >
+                    View the list of all upcoming and ongoing events,so that you  will be aware of when and where event of
+                    your interest is going to be organised.</div><br><br>
+                    <button id="view-btn" onclick=" divi()">view </button>
+
+            </div>
+        </div>
+        <div class="combo">
+
+            <div class="wht">
+                <div id="l4-content" >CREATE A EVENT</div> <div id="create-content">
+                Create your own Event so that people can get to
+                know your event and can join it. </div><br><br>
+
+                <button id="create-btn">CREATE </button>
+                <div id="my" class="modal">
+                    <div  class ="modal-content"><center><b> Create event by entering the following details.User is
+                        required to logged in to his/her account to do so</b></center>
+                        <button class="close" onclick="div_hide()">X</button>
+
+                        <div id="vr" style="font-size:30px"></div>
+                        <form  name="gg" action="#" method ="post" enctype="multipart/form-data"><div id="form1"><div id="fields"><br> Username* :
+                            <br><br>Phone number* :
+                            <br><br><br>Email id* :
+                            <br><br>Event-name* :
+                           <br>Event-Type* :
+                            <br><br>Date of start of event*:
+                            <br>Date of end of event*:
+                            <br><br><br>For-AGE UPTO*:
+                            <br><br>Enter city in which event is to be organised*
+                            <br><br><br>location
+                            <br><br><br>Number of people(Gathering)* :
+                            <br><br>Any more Details*:
+                            <br><br><br>enter link to ur site* :
+                            <br>enter path of image to be uploaded*:
+                        </div> <div id ="fill-fields"><br>
+                            <input type="text" name="user-name" autocomplete="on" autofocus="on" required id="urname"> <br><br>
+                            <input type="text" name="phone" autocomplete="on" required id="no"><br><br>
+                            <input type="email" name="id" required autocomplete="on" id="eid"><br><br>
+                            <input type="text" name="evntname" required id="ename"><br>
+                           <!-- <input type="checkbox" id="rel">religious &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" id="com">commercial
+                            <input type="checkbox" id="conf">conference &nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" id="comp" >competition
+                           <input type="checkbox" id="othr" onclick="test1()"><br>
+                           --> <input type="text"  id="othr2" ><br><br>
+                            <input type="date" id="sdate"><br>
+                            <input type="date" id="edate"><br><br>
+                            <input type="number" name="age" required id="ag"><br><br>
+                            <select multiple="true" id="city" >
+                                <option>Delhi</option>
+                                <option>Chennai</option>
+                                <option>Mumbai</option>
+                                <option>Kolkata</option>
+                                <option>Gurgaon</option>
+                                <option>Chandigarh</option>
+                                <option>hyderabad</option>
+                                <option>pune</option>
+                                <option>mysore</option>
+                                <option>Banglore</option>
+                                <option>Jaipur</option>
+                            </select><br><br><input type="text" id="othr3"><br><br>
+                            <input type="number" name="people" step="10" min="50" id="ppl"><br><br>
+                            <textarea rows="3" cols="60" wrap="hard" id="txt"></textarea>
+                            <br><input type="url" id="lin"><br>
+                            <input type="text" id="im">
+
+                            <br><input type="button" value="submit" onclick="cr()">
+                            <div id="vr2" style="font-size:30px"></div>
+                        </div>
+                        </div>
+
+                        </form>
+                    </div></div>
+            </div>
+            <div class="blck" >
+
+            </div>
+        </div>
+        <!--<div id="cevent" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 "></div>
+        <div id="vevent"  class="col-xs-6 col-sm-6 col-md-6 col-lg-6 "></div>
+        <br>
+            <div id="ccevent" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 "></div>
+            <div id="vvevent"  class="col-xs-6 col-sm-6 col-md-6 col-lg-6 "></div>
+        its
+        -->
+        <br>
+
+        <div id="inlower">
+            <div id="about" class="font-effect-shadow-multiple  font-effect-3d"><a name="ab">About Us</a></div>
+            <div id="about-que" style="font-family: 'Bree Serif', serif;">Aren’t you able to know your nearby Events that are for you?
+                <br>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Want to Advertise your Event on a Large scale?
+                <br>     &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;So Congrats ,you are at the right place !!!!
+                <br><br></div>
+            <div id="about-content" style="font-family: 'Kaushan Script', cursive;">
+                Motto of E-Event is to Let you know about your interested events that are going to held in your locality.
+                Just select your area and interested event category and we will let you know the events for you.
+                You can also Advertise your Event on a massive scale by creating your own Event on our website.
+                So for what are you waiting ? Celebrate the event by creating it ,inviting more people or by attending the event.
+            </div>
+        </div>
+
+
+
+
+        <br><br><br>
+
+
+        <div id="cconct" style="height:470px;width:auto">
+            <h1 style="margin-left:20px; font-size: 60px ; " class="font-effect-shadow-multiple  font-effect-3d"><a name="cn" >CONNECT</a></h1>
+            <hr style="height:10px;width: 1300px;background-color: gray ">
+            <div id="connect"  >
+
+                <form name="fg">
+                <div id="form" class="  col-xs-4 col-sm-1 col-md-4 col-lg-4  " >
+                    <br><br>
+
+                    <div class="row" >
+                        <div class="fb col-xs-3 col-sm-3 col-md-4 col-lg-4 col-lg-offset-1
+        col-xs-offset-1 col-md-offset-1 col-sm-offset-1" >Name</div>
+                        <div class="fb1 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-lg-offset-1
+        col-xs-offset-1 col-md-offset-1 col-sm-offset-1 " >
+                            <input type="text" id="ns" ></div>
+                        <div class=" pic col-xs-1 col-sm-1 col-md-1 col-lg-1 glyphicon glyphicon-user "></div>
+                    </div>
+                    <br>
+                    <div class=" row" >
+
+                        <div class="fb col-xs-3 col-sm-3 col-md-4 col-lg-4 col-lg-offset-1
+        col-xs-offset-1 col-md-offset-1 col-sm-offset-1" >E-mail</div>
+                        <div class="fb1 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-lg-offset-1
+        col-xs-offset-1 col-md-offset-1 col-sm-offset-1" ><input type="text" id="nns"></div>
+                        <div class=" pic col-xs-1 col-sm-1 col-md-1 col-lg-1 glyphicon glyphicon-envelope"></div>
+                    </div>
+                    <br>
+                    <div class=" row">
+                        <div class="fb col-xs-3 col-sm-3 col-md-4 col-lg-4 col-lg-offset-1
+        col-xs-offset-1 col-md-offset-1 col-sm-offset-1">Message</div>
+
+                        <div class="fb1 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-lg-offset-1
+        col-xs-offset-1 col-md-offset-1 col-sm-offset-1"><textarea rows="4" cols="20" id="nnns"></textarea></div>
+                        <div class=" pic col-xs-1 col-sm-1 col-md-1 col-lg-1 glyphicon glyphicon-comment"></div>
+                    </div>
+                    <br>
+
+                    <button type="submit" id="snd" onclick="bg()" >Send</button>
+                </div>
+                </form>
+                <div id="form2" class="col-xs-3 col-sm-5 col-md-4 col-lg-4 col-lg-offset-1
+        col-xs-offset-0 col-md-offset-0 col-sm-offset-1" >
+                    <h3><b>Follow us:</b></h3>
+
+                    <div id="info">
+                        If you want to know the regular details of your
+                        interested category events then you can follow us on facebook, linkedin, twitter ,youtube, google+.
+                    </div>
+
+                    <div id="fm" >
+                       <a href="https://www.facebook.com/"> <i class=" my fa-2x fa fa-facebook-official" aria-hidden="true"></i></a>
+                      <a href="https://www.linkedin.com/uas/login"> <i class=" my  fa-2x fa fa-linkedin-square" aria-hidden="true"></i>
+                      </a>
+                        <a href="https://mobile.twitter.com/session/new"><i class=" my fa-2x fa fa-twitter-square" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/?gl=IN"><i class=" my  fa-2x fa fa-youtube-square" aria-hidden="true"></i></a>
+                        <a href="https://accounts.google.com/ServiceLogin?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2Fb%2F0%2Feditpasswd&followup=https%3A%2F%2Faccounts.google.com%2Fb%2F0%2Feditpasswd#identifier"><i class=" my fa-2x fa fa-google-plus-square" aria-hidden="true"></i></a>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="wrapwrap">
+            <h1 style="margin-left:20px; font-size: 60px ; " class="font-effect-shadow-multiple  font-effect-3d"  style="color:blue;">UPCOMING EVENTS</h1>
+            <hr style="height:10px;width: 1300px;background-color: gray ">
+            <br><br>
+
+            <div class="wrap">
+
+                <div id="cont">
+
+                    <div id="img1">
+                     <!--   <img src="rio2.jpg" >
+                     -->
+                        <br>
+                    </div>
+                    <div id="img2">
+                       <!-- <img src="d1.png">
+-->
+                    </div>
+                    <div id="img3">
+   <!--                     <img src="d2.jpg" >
+-->
+                    </div>
+
+
+                    <button class="prv"  onclick="slide(-1)">&lt;</button>
+                    <button class="next" onclick="slide(1)">&gt;</button>
+                    <!--<a class="prv" onclick="slide(-1)"> &lt;</a>
+                            <a class="next" onclick="slide(1)">&gt; </a>
+                    -->
+                    <div id="sd" style="margin-top:300px; background-image: url(d13.jpg); ;height:200px "></div>
+
+                </div>
+                <div id="ccont">
+
+
+                    <div id="cimg1">
+                      <!--  <img src="../d3.jpg" >
+                      -->
+                    </div>
+                    <div id="cimg2">
+                     <!--     <img src="../d4.png" >
+                     -->
+                    </div>
+                    <div id="cimg3">
+                      <!--    <img src="../d5.jpg" >
+                      -->
+                    </div>
+                    <div  id="sd1" style="margin-top:300px; background-image: url(d13.jpg); ;height:200px "></div>
+                </div>
+                <div id="cccont">
+
+
+                    <div id="ccimg1">
+                    <!--    <img src="../d6.png" >
+                      -->
+                    </div>
+                    <div id="ccimg2">
+                      <!--    <img src="../d7.jpg" >
+                        -->
+                    </div>
+                    <div id="ccimg3">
+                    <!--      <img src="../d8.png" >
+                        -->
+                    </div>
+                    <div  id="sd2" style="margin-top:300px; background-image: url(d13.jpg) ;height:200px "></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+<!--
+<img src="http://res.cloudinary.com/dr2p7rxs7/image/upload/v1471662786/nrhsilnnz3h3xodcuzm6.jpg"  height="400px" width="200px">
+--><br><br>
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0;margin-top:300px" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+<script src="index.js"></script>
+<script>
+
+    lg=function(){
+        console.log("clked");
+
+        sub();
+      //  document.getElementById('inr').style.display="none";
+
+    }
+    sp=function(){
+        console.log("clked");
+        var val=-1;
+        sinup(function(val){
+            console.log("val is"+val);
+
+            if(val==0){
+                $('#chk').html(" password  did not match");
+            }
+            if(val==1) {
+                console.log("val is insiode if"+ val);
+                document.getElementById("signupid").style.display = "none";
+            }
+        });
+
+
+    }
+    cr=function(){
+        console.log("clked");
+        create();
+
+    }
+
+
+
+/*
+    $('#log').submit(function () {
+        console.log("clikced");
+        return false;
+        div_hide();
+    });
+*/
+    my=function(){
+        console.log("my called");
+        document.getElementById('inr').style.display="block";
+    }
+    cls=function(){
+        console.log("close called");
+        document.getElementById('inr').style.display="none";
+    }
+
+    var count=1;
+    function slide(no){
+
+        slideshow(no);
+    }
+
+    function slideshow(no){
+        console.log("strt count is "+count);
+        count=count+no;
+        console.log("button clicked"+count);
+        if(count>2)
+        {count=count-3 ;}
+        else if(count<0)
+        { count=count+3;}
+        console.log("count is"+count);
+        if(count==0){console.log("1 called");
+            document.getElementById("img1").style.display="block";
+            document.getElementById("img2").style.display="none";
+            document.getElementById("img3").style.display="none";
+
+            document.getElementById("cimg1").style.display="block";
+            document.getElementById("cimg2").style.display="none";
+            document.getElementById("cimg3").style.display="none";
+
+            document.getElementById("ccimg1").style.display="block";
+            document.getElementById("ccimg2").style.display="none";
+            document.getElementById("ccimg3").style.display="none";
+        }
+        if(count==1){
+            console.log("2 called");
+            document.getElementById("img2").style.display="block";
+            document.getElementById("img1").style.display="none";
+            document.getElementById("img3").style.display="none";
+
+            console.log("2 called");
+            document.getElementById("cimg2").style.display="block";
+            document.getElementById("cimg1").style.display="none";
+            document.getElementById("cimg3").style.display="none";
+
+            console.log("2 called");
+            document.getElementById("ccimg2").style.display="block";
+            document.getElementById("ccimg1").style.display="none";
+            document.getElementById("ccimg3").style.display="none";
+
+
+        }
+
+        if(count==2){
+            console.log("3 called");
+            document.getElementById("img3").style.display="block";
+            document.getElementById("img1").style.display="none";
+            document.getElementById("img2").style.display="none";
+            document.getElementById("cimg3").style.display="block";
+            document.getElementById("cimg1").style.display="none";
+            document.getElementById("cimg2").style.display="none";
+
+            document.getElementById("ccimg3").style.display="block";
+            document.getElementById("ccimg1").style.display="none";
+            document.getElementById("ccimg2").style.display="none";
+
+        }
+    }
+    var popid=document.getElementById("popupid");
+    var modal = document.getElementById('my');
+    var signup = document.getElementById("signupid");
+    var popup = document.getElementById('myPopup');
+    var btn = document.getElementById("create-btn");
+    //var span = document.getElementsByClassName("close")[0];
+    function sign(){
+        signup.style.display="block";
+    }
+    btn.onclick = function() {
+        modal.style.display ="block";
+    }
+    //span.onclick = function() {
+    //  modal.style.display = "none";
+    //}
+
+    window.onclick = function(event) {
+        if (event.target == modal || event.target==popup) {
+            modal.style.display = "none";
+           // popid.style.display="none";
+            popup.style.visibility="hidden";
+            signup.style.display="none";
+
+        }}
+    function myFunction() {
+
+        // popup.classList.toggle('show');
+        popup.style.display="block";
+        // popup.style.visibility="visible";
+    }
+    function div_hide(){
+        document.gg.reset();
+        document.ff.reset();
+
+        //  signup.style.visibility="hidden";
+        signup.style.display="none";
+        // popup.style.display="none";
+        modal.style.display="none";
+
+    }
+    var count1=1;
+
+    function test1()
+    {console.log("go clicked count is"+count1);
+
+        var othr= $('#othr').val();
+console.log("othr vaue"+othr);
+        if(count1==1) {
+            if (othr == "on") {
+
+                console.log("inside enabling");
+
+                $('#othr2').prop("disabled", false);
+                count1=0;
+//console.log("ohtr2 ki value is")
+            }
+        }
+       else if(count1==0){
+            console.log("inside disabling");
+            $('#othr2').prop("disabled",true);
+            count1=1;
+        }
+
+    }
+
+
+</script>
+
+
+<script src=" AIzaSyAknim_dNU0NOjj9lVv2NnpzLbQdXaHcv8 "></script>
+</body>
+</html>
